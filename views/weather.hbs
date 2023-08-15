@@ -1,0 +1,187 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/weather.css" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    {{#if status}}
+      <div class="frame">
+        <div class="moon">
+          <div class="moon-crater1"></div>
+          <div class="moon-crater2"></div>
+        </div>
+
+        <div class="region">{{region}}</div>
+        <div class="country">{{country}}</div>
+
+        <div class="hill-bg-1"></div>
+        <div class="hill-bg-2"></div>
+        <div class="hill-fg-1"></div>
+        <div class="hill-fg-2"></div>
+        <div class="hill-fg-3"></div>
+
+        <div class="front">
+          <div>
+            <div class="temperature">
+              {{Celcius}}°C
+            </div>
+            <div class="icons">
+              <i class="fas fa-wind"></i><br /><i class="fas fa-tint"></i>
+            </div>
+            <div>
+              <div class="info">{{wind_degree}}
+                <br />
+                {{cloud}}
+              </div>
+
+            </div>
+          </div>
+          {{! <div class="proverb">“Frogs croaking in the lagoon,<br />Means rain will
+          come real soon.”</div> }}
+
+          <!-- Form xử lý thanh tìm kiếm -->
+          <form action="/">
+            <div class="proverb input-group">
+              <div class="form-outline form-outline-p ml-3">
+                <input
+                  type="text"
+                  id="form1"
+                  class="form-control form-control-p"
+                  name="address"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-right">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+
+        </div>
+        <div class="drop-big-1"></div>
+        <div class="drop-big-2"></div>
+        <div class="drop-big-3"></div>
+        <div class="drop-big-4"></div>
+        <div class="drop-big-5"></div>
+        <div class="drop-big-6"></div>
+        <div class="drop-big-7"></div>
+        <div class="drop-big-8"></div>
+        <div class="drop-big-9"></div>
+        <div class="drop-big-10"></div>
+        <div class="drop-medium-1"></div>
+        <div class="drop-medium-2"></div>
+        <div class="drop-medium-3"></div>
+        <div class="drop-medium-4"></div>
+        <div class="drop-medium-5"></div>
+        <div class="drop-medium-6"></div>
+        <div class="drop-medium-7"></div>
+        <div class="drop-medium-8"></div>
+        <div class="drop-medium-9"></div>
+        <div class="drop-medium-10"></div>
+        <div class="drop-small-1"></div>
+        <div class="drop-small-2"></div>
+        <div class="drop-small-3"></div>
+        <div class="drop-small-4"></div>
+        <div class="drop-small-5"></div>
+        <div class="drop-small-6"></div>
+        <div class="drop-small-7"></div>
+        <div class="drop-small-8"></div>
+        <div class="drop-small-9"></div>
+        <div class="drop-small-10"></div>
+      </div>
+
+    {{else}}
+      <div class="frame">
+        <div class="moon">
+          <div class="moon-crater1"></div>
+          <div class="moon-crater2"></div>
+        </div>
+
+        <div class="region"></div>
+        <div class="country"></div>
+
+        <div class="hill-bg-1"></div>
+        <div class="hill-bg-2"></div>
+        <div class="hill-fg-1"></div>
+        <div class="hill-fg-2"></div>
+        <div class="hill-fg-3"></div>
+
+        <div class="front">
+          <div>
+            <div class="temperature">
+            </div>
+            <div class="icons">
+              {{!-- <i class="fas fa-wind"></i><br /><i class="fas fa-tint"></i> --}}
+            </div>
+            <div>
+              <div class="info">
+                <br />
+              </div>
+
+            </div>
+          </div>
+          {{! <div class="proverb">“Frogs croaking in the lagoon,<br />Means rain will
+          come real soon.”</div> }}
+
+          <!-- Form xử lý thanh tìm kiếm -->
+          <form action="/">
+            <div class="proverb input-group">
+              <div class="form-outline form-outline-p ml-3">
+                <input
+                  type="text"
+                  id="form1"
+                  class="form-control form-control-p"
+                  name="address"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-right">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+
+        </div>
+        <div class="drop-big-1"></div>
+        <div class="drop-big-2"></div>
+        <div class="drop-big-3"></div>
+        <div class="drop-big-4"></div>
+        <div class="drop-big-5"></div>
+        <div class="drop-big-6"></div>
+        <div class="drop-big-7"></div>
+        <div class="drop-big-8"></div>
+        <div class="drop-big-9"></div>
+        <div class="drop-big-10"></div>
+        <div class="drop-medium-1"></div>
+        <div class="drop-medium-2"></div>
+        <div class="drop-medium-3"></div>
+        <div class="drop-medium-4"></div>
+        <div class="drop-medium-5"></div>
+        <div class="drop-medium-6"></div>
+        <div class="drop-medium-7"></div>
+        <div class="drop-medium-8"></div>
+        <div class="drop-medium-9"></div>
+        <div class="drop-medium-10"></div>
+        <div class="drop-small-1"></div>
+        <div class="drop-small-2"></div>
+        <div class="drop-small-3"></div>
+        <div class="drop-small-4"></div>
+        <div class="drop-small-5"></div>
+        <div class="drop-small-6"></div>
+        <div class="drop-small-7"></div>
+        <div class="drop-small-8"></div>
+        <div class="drop-small-9"></div>
+        <div class="drop-small-10"></div>
+      </div>
+
+    {{/if}}
+
+    <script src="/js/Search.js"></script>
+  </body>
+</html>
